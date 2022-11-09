@@ -1,0 +1,48 @@
+*) Whenever an object gets created, it's always stored in the
+   heap space and stack memory contains the reference to it.
+
+*) Stack memory contains primitive datatype and reference variables.
+
+*) When an reference variable or an object reference get assigned by a another
+   reference of an object. The value of the object never changes. The address
+   of the object only changes to assigned by one and the previous address and the
+   data will be erased by garbage collector.
+
+   eg : A(class name) obj1 = new A(13 - random argument);
+        A(class name) obj2 = new A(24 - random argument);
+
+   obj1 = obj2;
+
+   *) At here the object is getting not assigned by a new value.
+      The obj1's reference only mentioned in the code and it's going
+      for the obj2's memory address only.
+
+
+
+*) The equals() method of the Object class compare the equality of two objects.
+
+   equals() method compares two objects. Objects are equal when they have the
+   same state (usually comparing variables). Objects are identical when they
+   share the class identity.
+
+   equals() compares the values of the objects’ attributes:
+
+
+HASHCODE
+==========
+
+*) Has code is a 32 bit signed integer value. It is unique ID provided by JVM to
+   java object. Each java object is associated with hash code.
+
+*) The hash code is managed by hash based data structure, such as HashTable, HashSet, etc.
+
+Hashcode example :
+
+A(class) obj1 = new A(918, "Maria");
+A(class) obj2 = new A(918, "Maria");
+
+int a = emp.hashCode();
+int b = emp.hashCode();
+
+If an object’s hashcode is not the same as another object’s hashcode,
+there is no reason to execute the equals() method:
